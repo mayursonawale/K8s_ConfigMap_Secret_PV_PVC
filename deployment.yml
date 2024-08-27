@@ -24,7 +24,7 @@ spec:
         - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: mysql-config
+              name: mysql-configmap
               key: MYSQL_DATABASE
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
@@ -37,4 +37,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: mysql-pvc
+          claimName: mysql-persistent-volume-claim
